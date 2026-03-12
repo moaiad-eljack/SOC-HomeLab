@@ -9,10 +9,10 @@ detection.
 ## Lab Environment
 | VM | Role | IP |
 |---|---|---|
-| Kali Linux | Attacker | 192.168.20.11 |
-| Windows 10 | Victim Workstation | 192.168.20.10 |
-| Windows Server 2022 | Log Server | 192.168.10.5 |
-| Metasploitable 2 | Vulnerable Target | 192.168.10.20 |
+| Kali Linux | Attacker | 192.168.1.17 |
+| Windows 10 | Victim Workstation | 192.168.1.18 |
+| Windows Server 2022 | Log Server | 192.168.1.222 |
+| Metasploitable 2 | Vulnerable Target | 192.168.1.21 |
 
 ## Tools Used
 - VirtualBox —> virtualization

@@ -167,3 +167,54 @@ With the network fully configured and both machines communicating I am
 ready to move into Phase 2 which is reconnaissance. I will run Nmap 
 scans from Kali against the Windows 10 machine to discover open ports 
 and services, just like a real attacker would before launching an attack.
+
+
+## Completing the Lab Network
+
+After configuring Kali and Windows 10 I moved on to assigning static 
+IPs to the remaining two machines.
+
+Windows Server 2022 was configured the same way as Windows 10 through 
+TCP/IPv4 properties:
+- IP Address: 192.168.1.222
+- Subnet Mask: 255.255.255.0
+- Gateway: 192.168.1.1
+- DNS: 8.8.8.8
+
+Metasploitable 2 does not have a GUI so the IP was assigned directly 
+through the terminal using ifconfig:
+- IP Address: 192.168.1.21
+- Subnet Mask: 255.255.255.0
+
+After assigning IPs to all machines I ran ping tests from Kali to every 
+machine on the network to confirm full connectivity.
+
+## Final Connectivity Results
+| Test | Result |
+|---|---|
+| Kali to Windows 10 | Successful |
+| Kali to Windows Server 2022 | Successful |
+| Kali to Metasploitable 2 | Successful |
+
+At this point all four machines are fully configured, statically 
+addressed and communicating on the same isolated internal network. 
+The lab environment is ready for the next phase.
+
+## Final Snapshots
+| VM | Snapshot Name |
+|---|---|
+| Windows Server 2022 | Server2022-Network-Configured |
+| Metasploitable 2 | Metasploitable-Network-Configured |
+
+## Additional Screenshots
+   ipconfig output confirming 192.168.1.222 on windows server 2022
+ <img width="976" height="779" alt="Screenshot 2026-03-12 151248" src="https://github.com/user-attachments/assets/a7fac757-6e1a-4c29-92a7-eb332c8a117a" />
+
+   ifconfig output confirming 192.168.1.21 on metasploitable 2
+ <img width="827" height="635" alt="Screenshot 2026-03-12 152543" src="https://github.com/user-attachments/assets/a8f8bafa-7682-42a0-9dd2-551e524d3a6f" />
+
+   successful ping from Kali to Windows Server
+ <img width="1029" height="662" alt="Screenshot 2026-03-12 152020" src="https://github.com/user-attachments/assets/30a4c986-d514-4c20-b0b6-a047becdf2c1" />
+
+   successful ping from Kali to Metasploitable 2
+ <img width="895" height="350" alt="Screenshot 2026-03-12 152117" src="https://github.com/user-attachments/assets/922d7c7a-efb0-4d63-8071-5ee8928eb40c" />

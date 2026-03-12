@@ -1,4 +1,4 @@
-# Phase 1 — Network Setup
+# Phase 1 - Network Setup
 
 ## What I'm Trying to Do
 Before touching any attack tools or malware, I needed to build a safe 
@@ -53,7 +53,7 @@ normal — it's bundled inside Metasploit so it doesn't have its own
 version number.
 
 ## Software Installed
-- **Wireshark 4.6.4** on Windows 10 — installed with Npcap enabled 
+- **Wireshark 4.6.4** on Windows 10 - installed with Npcap enabled 
   which is required for live packet capture. Without Npcap, Wireshark 
   can see traffic but can't capture it.
 
@@ -76,6 +76,8 @@ back instantly without reinstalling anything.
 <img width="1008" height="759" alt="Screenshot 2026-03-11 215824" src="https://github.com/user-attachments/assets/c1c6cbdf-d4be-4e8d-b356-a8279cbc10ae" />
   above png is Wireshark open on Windows 10 showing 
   network adapters detected, confirms Npcap installed correctly
+<img width="1017" height="749" alt="Screenshot 2026-03-11 232850" src="https://github.com/user-attachments/assets/dbdc505a-d98f-41fa-935a-73d9f6031372" />
+  above png is Windows Server 2022 showing all updates installed
 
 ## What's Next
 Once all snapshots are confirmed I'll switch all VMs to Internal Network 

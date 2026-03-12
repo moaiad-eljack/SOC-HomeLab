@@ -82,10 +82,4 @@ Once all snapshots are confirmed I'll switch all VMs to Internal Network
 mode in VirtualBox and assign static IPs to each machine. Then I'll 
 verify connectivity by pinging between them before moving on to 
 reconnaissance.
-```
 
----
-
-Paste that in, commit it with message:
-```
-Add Phase 1 setup notes - network design and pre-lab preparation

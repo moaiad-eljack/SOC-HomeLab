@@ -167,7 +167,7 @@ Free_VPN.exe was also visible running in Task Manager confirming the
 malware was actively running as a background process on the victim 
 machine.
 
-## Key Takeaways
+## Crucial Aspects
 In a real SOC environment the following would trigger alerts:
 
 - An unknown executable making outbound connections on port 4444

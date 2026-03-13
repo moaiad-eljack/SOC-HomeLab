@@ -178,21 +178,15 @@ In a real SOC environment the following would trigger alerts:
   immediately making network connections
 
 ## Screenshots
-- `payload-created.png` — msfvenom output showing payload generated 
-  successfully
-- `payload-verified.png` — ls and file commands confirming the 
-  executable exists and is valid
-- `metasploit-options.png` — Metasploit handler configured with 
-  correct payload, LHOST and LPORT
-- `webserver-running.png` — Python web server running on port 9999
-- `metasploit-listener.png` — Metasploit listener running and waiting
-- `webserver-browser.png` — Windows 10 browser showing directory 
-  listing with Free_VPN.exe available
-- `meterpreter-session.png` — Meterpreter sessions opening on Kali 
-  confirming successful reverse shell
-- `meterpreter-sysinfo.png` — sysinfo and getuid output proving full 
-  access to victim machine
-- `netstat-freevpn.png` — netstat output on Windows 10 showing 
-  Free_VPN.exe established connections to Kali port 4444
-- `taskmanager-freevpn.png` — Task Manager showing Free_VPN.exe 
-  running as background process
+- [Msfvenom payload generated successfully](screenshots/payload-created.png)
+- [File verified as valid Windows executable](screenshots/payload-verified.png)
+- [Metasploit handler configured with correct settings](screenshots/metasploit-options.png)
+- [Python web server running on port 9999](screenshots/webserver-running.png)
+- [Metasploit listener waiting for incoming connection](screenshots/metasploit-listener.png)
+- [Windows 10 browser showing Free_VPN.exe available for download](screenshots/webserver-browser.png)
+- [Meterpreter sessions opening confirming successful reverse shell](screenshots/meterpreter-session.png)
+- [Sysinfo showing victim machine details](screenshots/meterpreter-sysinfo.png)
+- [Getuid and pwd confirming current user and directory on victim](screenshots/meterpreter-getuid&pwd.png)
+- [Running processes on victim machine via meterpreter](screenshots/meterpreter-ps.png)
+- [Netstat showing Free_VPN.exe established connections to Kali port 4444](screenshots/netstat-freevpn.png)
+- [Task Manager showing Free_VPN.exe running as background process](screenshots/taskmanager-freevpn.png)

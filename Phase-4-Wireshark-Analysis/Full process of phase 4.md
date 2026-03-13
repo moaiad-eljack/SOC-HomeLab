@@ -137,5 +137,5 @@ traffic from background noise.
 - [Filtered view showing only port 4444 reverse shell traffic](screenshots/wireshark-filtered-4444.png)
 - [Push data filter showing only active command traffic](screenshots/wireshark-push-data.png)
 - [Active meterpreter session traffic with PSH ACK data packets](screenshots/wireshark-packet-data.png)
-- [Colored traffic view showing purple TCP and yellow retransmissions](screenshots/wireshark-color-view.png)
+
 

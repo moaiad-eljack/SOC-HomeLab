@@ -178,8 +178,8 @@ In a real SOC environment the following would trigger alerts:
   immediately making network connections
 
 ## Screenshots
- msfvenom output showing payload generated successfully
- 
+- `payload-created.png` — msfvenom output showing payload generated 
+  successfully
 - `payload-verified.png` — ls and file commands confirming the 
   executable exists and is valid
 - `metasploit-options.png` — Metasploit handler configured with 

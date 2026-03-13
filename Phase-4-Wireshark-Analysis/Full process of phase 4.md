@@ -126,10 +126,11 @@ framework under T1071 Application Layer Protocol and T1571 Non-Standard
 Port.
 
 ## pcap File
-The full packet capture was saved as reverse-shell-capture.pcap and is 
-included in this repository. Anyone reviewing this project can open it 
-in Wireshark and apply the tcp.port == 4444 filter to see exactly what 
-was captured during the attack.
+The full packet capture was saved as reverse-shell-capture.pcap on the 
+Windows 10 VM desktop. The file captures the complete attack from 
+initial beaconing through the active meterpreter session. Applying the 
+filter tcp.port == 4444 in Wireshark will isolate the reverse shell 
+traffic from background noise.
 
 ## Screenshots
 - [Malware beaconing before listener was active showing RST ACK packets](screenshots/wireshark-beaconing.png)

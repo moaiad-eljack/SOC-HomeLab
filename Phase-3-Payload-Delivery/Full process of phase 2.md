@@ -1,4 +1,4 @@
-# Phase 3 — Payload Creation and Delivery
+# Phase 3  Payload Creation and Delivery
 
 ## What I'm Trying to Do
 This phase covers creating a malicious executable using msfvenom and 
@@ -29,7 +29,7 @@ email with a link to download a free VPN would very likely click it
 without suspecting anything malicious. This is exactly the kind of 
 naming convention real threat actors use to disguise malware.
 
-## Step 1 — Creating the Payload
+## Step 1  Creating the Payload
 
 ### Command Used
 ```bash
@@ -64,7 +64,7 @@ Output confirmed it as an executable for MS Windows x86-64
 architecture which is exactly what we need to run on the 64 bit 
 Windows 10 victim machine.
 
-## Step 2 — Setting Up the Metasploit Listener
+## Step 2  Setting Up the Metasploit Listener
 
 Before delivering the payload I set up a listener in Metasploit to 
 catch the incoming connection when the victim runs the file.
@@ -92,7 +92,7 @@ Started reverse TCP handler on 192.168.1.17:4444
 
 Kali was now listening and waiting.
 
-## Step 3 — Hosting and Delivering the Payload
+## Step 3  Hosting and Delivering the Payload
 
 A simple Python web server was started on Kali to host the file:
 ```bash
@@ -109,7 +109,7 @@ The directory listing showed Free_VPN.exe available for download.
 Clicking it downloaded the file to the Windows 10 machine simulating 
 a victim downloading malware from an attacker controlled server.
 
-## Step 4 — Execution and Shell
+## Step 4  Execution and Shell
 
 After downloading Free_VPN.exe on Windows 10 I attempted to run it 
 but Windows Defender immediately killed the process. The session opened 
@@ -128,7 +128,7 @@ Meterpreter session 3 opened (192.168.1.17:4444 to 192.168.1.18:53970)
 Two sessions opened because the payload was executed twice during 
 testing. Both sessions were fully functional.
 
-## Step 5 — Verifying Full Control
+## Step 5  Verifying Full Control
 
 From the meterpreter shell I ran several commands to confirm full 
 access to the victim machine:
@@ -144,7 +144,7 @@ getuid output:
 Server username: DESKTOP-2KU324L\wsp vro
 ```
 
-## Step 6 — Verifying From the Victim Side
+## Step 6  Verifying From the Victim Side
 
 On Windows 10 I opened an elevated Command Prompt ( baiscally cmd as an admin) and ran:
 ```cmd

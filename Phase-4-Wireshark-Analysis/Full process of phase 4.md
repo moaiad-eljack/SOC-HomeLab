@@ -137,18 +137,4 @@ was captured during the attack.
 - [Push data filter showing only active command traffic](screenshots/wireshark-push-data.png)
 - [Active meterpreter session traffic with PSH ACK data packets](screenshots/wireshark-packet-data.png)
 - [Colored traffic view showing purple TCP and yellow retransmissions](screenshots/wireshark-color-view.png)
-```
 
-### Step 2 — Create Screenshots Folder and Upload
-
-1. Create `Phase-4-Wireshark-Analysis/screenshots/placeholder.md`
-2. Upload these screenshots to that folder:
-   - `wireshark-beaconing.png`
-   - `wireshark-filtered-4444.png`
-   - `wireshark-packet-data.png`
-   - `wireshark-color-view.png`
-3. Also upload `reverse-shell-capture.pcap` directly to the `Phase-4-Wireshark-Analysis` folder
-
-Commit message:
-```
-Add Phase 4 Wireshark screenshots and pcap capture file

@@ -1,4 +1,4 @@
-# Phase 4 — Wireshark Traffic Analysis
+# Phase 4  Wireshark Traffic Analysis
 
 ## What I'm Trying to Do
 This phase is where I switch from attacker to defender mindset. Instead 
@@ -29,7 +29,7 @@ Free_VPN.exe which was still running in the background on Windows 10
 immediately connected back, generating live traffic for Wireshark to 
 capture.
 
-## Finding 1 — Malware Beaconing Behavior
+## Finding 1  Malware Beaconing Behavior
 
 Before the Metasploit listener was active I noticed something 
 interesting in the capture. Wireshark was showing red and black packets 
@@ -58,7 +58,7 @@ ARP broadcast → Windows 10 normal network behavior mixed in
 This screenshot alone tells a complete story of a compromised machine 
 trying to phone home.
 
-## Finding 2 — Active Meterpreter Session Traffic
+## Finding 2  Active Meterpreter Session Traffic
 
 Once the Metasploit listener was started on Kali the connection was 
 established immediately. Applying the display filter:
@@ -95,7 +95,7 @@ connection. Every command I ran in meterpreter like sysinfo, getuid,
 ps and ls generated a burst of these packets as the victim machine sent 
 back the results.
 
-## Finding 3 — Encrypted Payload Data
+## Finding 3  Encrypted Payload Data
 
 Clicking into any PSH ACK packet and expanding the Data section in the 
 middle panel revealed the raw bytes being transmitted:

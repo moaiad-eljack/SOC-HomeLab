@@ -1,4 +1,4 @@
-# Phase 5 — Windows Event Log Analysis
+# Phase 5  Windows Event Log Analysis
 
 ## Quick Note Before We Start
 
@@ -18,7 +18,7 @@ system itself. Together they build a complete picture of the attack from
 two different angles which is exactly how a real SOC analyst approaches 
 an incident investigation.
 
-## First Attempt — Audit Policy Not Enabled
+## First Attempt  Audit Policy Not Enabled
 
 When I first opened Event Viewer and searched for Event ID 4688 process 
 creation events related to Free_VPN.exe, nothing came up. After some 
@@ -98,7 +98,7 @@ what privileges they have and what other targets might be accessible.
 After running the commands I went back to Event Viewer on Windows 10 
 and this time the logs told the complete story.
 
-### Finding 1 — Free_VPN.exe Process Creation (Event ID 4688)
+### Finding 1  Free_VPN.exe Process Creation (Event ID 4688)
 
 Filtered Security logs by Event ID 4688 and searched for Free_VPN. 
 This time it appeared immediately. The log entry contained:
@@ -117,7 +117,7 @@ ran it, where it was located on disk and that it was launched by
 explorer.exe meaning the user double clicked it. This is a complete 
 forensic record of the initial infection event.
 
-### Finding 2 — Attacker Shell Commands (Event ID 4688)
+### Finding 2  Attacker Shell Commands (Event ID 4688)
 
 Searching further I found log entries for the commands run through the 
 meterpreter shell. The most significant was whoami:
@@ -164,22 +164,4 @@ it a SOC team is essentially investigating blind.
 - [Registry key enabling command line logging in process creation events](screenshots/cmdline-logging-enabled.png)
 - [Event ID 4688 showing Free_VPN.exe execution with full details](screenshots/event-4688-freevpn.png)
 - [Event ID 4688 showing whoami executed through cmd.exe by meterpreter](screenshots/event-4688-whoami.png)
-```
 
----
-
-5. Commit message:
-```
-Add Phase 5 Windows event log analysis documentation
-```
-6. Commit directly to main
-7. Create screenshots folder and upload:
-   - `audit-policy-enabled.png`
-   - `audit-process-creation.png`
-   - `cmdline-logging-enabled.png`
-   - `event-4688-freevpn.png`
-   - `event-4688-whoami.png`
-
-Commit message for screenshots:
-```
-Add Phase 5 event log screenshots

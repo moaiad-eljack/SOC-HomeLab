@@ -159,8 +159,15 @@ part of every organization's baseline security configuration. Without
 it a SOC team is essentially investigating blind.
 
 ## Screenshots
-- [Local Security Policy showing audit process tracking enabled](screenshots/audit-policy-enabled.png)
-- [Advanced audit policy with process creation logging enabled](screenshots/audit-process-creation.png)
-- [Registry key enabling command line logging in process creation events](screenshots/cmdline-logging-enabled.png)
-- [Event ID 4688 showing Free_VPN.exe execution with full details](screenshots/event-4688-freevpn.png)
-- [Event ID 4688 showing whoami executed through cmd.exe by meterpreter](screenshots/event-4688-whoami.png)
+- [Local Security Policy configured to audit process tracking with Success 
+and Failure enabled](screenshots/audit-policy-enabled.png)
+- [Advanced Audit Policy with process creation logging set to Success 
+ensuring every launched process gets recorded](screenshots/audit-process-creation.png)
+- [Registry key ProcessCreationIncludeCmdLine was created and Enabled set to 1 forcing 
+Windows to log the full command line of every process that runs](screenshots/cmdline-logging-enabled.png)
+- [Event ID 4688 capturing Free_VPN.exe launching from the Downloads folder 
+under user wsp vro with explorer.exe as the parent process confirming the 
+user executed it manually](screenshots/event-4688-freevpn.png)
+- [Event ID 4688 capturing whoami.exe being executed through cmd.exe proving 
+the attacker had an active command shell on the victim machine via 
+meterpreter](screenshots/event-4688-whoami.png)

@@ -2,7 +2,7 @@
 
 ## Quick Note Before We Start
 
-One thing I forgot to mention in the earlier phases — the Windows 10 
+One thing I forgot to mention in the earlier phases the Windows 10 
 victim machine username is wsp vro. Yes that is a real username on a 
 real machine, judge me later. You will see it pop up throughout the 
 logs and screenshots in this phase and going forward. Just know that 

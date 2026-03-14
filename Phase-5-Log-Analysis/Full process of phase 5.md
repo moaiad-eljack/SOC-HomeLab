@@ -146,7 +146,7 @@ whoami executed through cmd.exe
 All of it logged by Windows Event Viewer
 ```
 
-## Key Lesson Learned
+## Crucial Lesson Learned
 
 The most important takeaway from this phase is that audit policies must 
 be configured before an incident happens. The first time I looked for 
@@ -164,4 +164,3 @@ it a SOC team is essentially investigating blind.
 - [Registry key enabling command line logging in process creation events](screenshots/cmdline-logging-enabled.png)
 - [Event ID 4688 showing Free_VPN.exe execution with full details](screenshots/event-4688-freevpn.png)
 - [Event ID 4688 showing whoami executed through cmd.exe by meterpreter](screenshots/event-4688-whoami.png)
-

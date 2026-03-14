@@ -42,7 +42,7 @@ Windows 10 so the logs would capture everything this time.
 
 Opened Local Security Policy via secpol.msc and navigated to:
 ```
-Security Settings → Local Policies → Audit Policy → Audit Process Tracking
+Security Settings -> Local Policies -> Audit Policy -> Audit Process Tracking
 ```
 Enabled both Success and Failure auditing. This tells Windows to log 
 every process that launches or attempts to launch on the system.
@@ -51,8 +51,8 @@ every process that launches or attempts to launch on the system.
 
 Navigated to:
 ```
-Security Settings → Advanced Audit Policy Configuration → 
-System Audit Policies → Detailed Tracking → Audit Process Creation
+Security Settings -> Advanced Audit Policy Configuration -> 
+System Audit Policies -> Detailed Tracking  Audit Process Creation
 ```
 Enabled Success auditing. This extends the process creation logs to 
 include the full command line used to launch each process, making it 
@@ -82,10 +82,10 @@ meterpreter to drop into a real Windows command prompt on the victim
 machine and ran several commands to simulate what a real attacker would 
 do after gaining access:
 ```
-shell     → dropped into Windows cmd.exe on victim machine
-whoami    → confirmed which user account the malware was running as
-ipconfig  → gathered network configuration information
-net user  → enumerated user accounts on the machine
+shell     -> dropped into Windows cmd.exe on victim machine
+whoami    -> confirmed which user account the malware was running as
+ipconfig  -> gathered network configuration information
+net user  -> enumerated user accounts on the machine
 ```
 
 Each of these commands represents a real post exploitation technique. 

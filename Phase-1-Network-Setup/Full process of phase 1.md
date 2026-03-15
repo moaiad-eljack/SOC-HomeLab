@@ -20,12 +20,12 @@ VirtualBox gives you a few network options and I specifically chose
 Internal Network for this lab. Here's my thinking:
 
 - **NAT** gives internet access but machines can't talk to each other 
-  easily -- not useful for attack simulation
-- **Bridged** puts your VMs on the same network as your real computer -- 
+  easily not useful for attack simulation
+- **Bridged** puts your VMs on the same network as your real computer
   way too risky when running malware
 - **Host-Only** is isolated but your VMs still have a connection to the 
   host machine
-- **Internal Network** is the sweet spot -- VMs talk to each other, 
+- **Internal Network** is the sweet spot VMs talk to each other, 
   nothing gets out, host machine is completely untouched
 
 For a malware lab this was the only real choice.
@@ -49,11 +49,11 @@ Ran version checks on all the key tools before isolating the machine:
 | msfvenom | Included in Metasploit |
 
 Everything came back clean. msfvenom shows "version unknown" which is 
-normal — it's bundled inside Metasploit so it doesn't have its own 
+normal it's bundled inside Metasploit so it doesn't have its own 
 version number.
 
 ## Software Installed
-- **Wireshark 4.6.4** on Windows 10 - installed with Npcap enabled 
+- **Wireshark 4.6.4** on Windows 10 installed with Npcap enabled 
   which is required for live packet capture. Without Npcap, Wireshark 
   can see traffic but can't capture it.
 

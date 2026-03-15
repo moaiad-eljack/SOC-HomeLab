@@ -24,7 +24,7 @@ it happened including the troubleshooting steps and failures.
 - Windows Event Viewer for host based log forensics
 - Windows Event Forwarding for centralized log collection attempt
 
-## 💀 Attack Summary
+## 👾 Attack Summary
 A reverse shell payload named Free_VPN.exe was created using msfvenom 
 and delivered to the Windows 10 victim machine simulating a real world 
 phishing attack. The filename was chosen deliberately as a social 

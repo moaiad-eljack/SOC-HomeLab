@@ -66,6 +66,17 @@ wsp vro. Post exploitation commands run through the meterpreter shell
 were also captured in the logs proving the complete attack chain from 
 initial execution to active attacker control.
 
+## 🧭 MITRE ATTCK Mapping
+
+| Technique ID | Technique Name | How It Was Used |
+|---|---|---|
+| T1566 | Phishing | Free_VPN.exe delivered simulating a social engineering lure |
+| T1059 | Command and Scripting Interpreter | Shell command used to access cmd.exe on victim machine |
+| T1571 | Non Standard Port | Meterpreter C2 communication over port 4444 |
+| T1082 | System Information Discovery | sysinfo gathered OS version and architecture |
+| T1033 | System Owner Discovery | whoami confirmed the compromised user account |
+| T1070 | Indicator Removal | Windows Defender disabled before payload execution |
+
 ## 📚 Lessons Learned
 Windows 10 does not enable process creation auditing by default which 
 means the first time I looked for evidence in the event logs it was 

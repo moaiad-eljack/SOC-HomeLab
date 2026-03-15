@@ -88,3 +88,12 @@ can silently break security tooling.
 All activities were conducted in a fully isolated VirtualBox internal 
 network environment for educational purposes only. No real systems 
 were affected and no traffic left the lab environment at any point.
+
+## 📜 License
+
+© 2026 [Moaiad Eljack]. All rights reserved.
+
+This project and all its documentation were created and written by 
+[Moaiad Eljack] as an original hands-on cybersecurity home lab. 
+You are welcome to use this project as inspiration for your own lab 
+but please do not copy the documentation or present it as your own work.

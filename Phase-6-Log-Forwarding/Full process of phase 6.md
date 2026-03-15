@@ -201,9 +201,21 @@ subscription. This would be covered in a dedicated Active Directory
 lab which is planned as the next project after this one.
 
 ## Screenshots
-- [WinRM configured and listening on Windows 10 port 5985](screenshots/winrm-configured.png)
-- [WinRM successfully updated for remote management on Windows 10](screenshots/winrm-win10-configured.png)
-- [Windows Event Collector service configured on Server 2022](screenshots/wecutil-configured.png)
-- [Server trusted hosts updated to include Windows 10](screenshots/server-trusted-hosts.png)
-- [Subscription created targeting Windows 10 as log source](screenshots/subscription-computer-added.png)
-- [Domain join attempt failing due to DNS resolution issue](screenshots/domain-join-failed.png)
+- [WinRM listener confirmed active on Windows 10 showing HTTP transport 
+on port 5985 and listening on 192.168.1.18](screenshots/winrm-configured.png)
+- [WinRM successfully configured on Windows 10 for remote management 
+with firewall exception enabled and admin rights granted](screenshots/winrm-win10-configured.png)
+- [Windows Event Collector service configured on Server 2022 using 
+wecutil qc confirming the server is ready to receive forwarded logs](screenshots/wecutil-configured.png)
+- [Windows Server 2022 trusted hosts updated to DESKTOP-2KU324L 
+allowing the server to authenticate connections from Windows 10](screenshots/server-trusted-hosts.png)
+- [Event Viewer subscription created on Server 2022 with Windows 10 
+added as the source computer for Security log collection](screenshots/subscription-computer-added.png)
+- [Network path not found error when testing the subscription connection 
+confirming the authentication failure between the domain joined server 
+and the workgroup Windows 10 machine](screenshots/network-path-error.png)
+- [Domain join attempt showing Active Directory domain controller 
+could not be contacted due to DNS misconfiguration](screenshots/domain-join-failed.png)
+  [Network path not found error when testing the subscription connection 
+confirming the authentication failure between the domain joined server 
+and the workgroup Windows 10 machine](screenshots/network-path-error.png)

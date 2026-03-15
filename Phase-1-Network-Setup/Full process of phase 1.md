@@ -1,4 +1,4 @@
-# Phase 1 - Network Setup
+# Phase 1  Network Setup
 
 ## What I'm Trying to Do
 Before touching any attack tools or malware, I needed to build a safe 

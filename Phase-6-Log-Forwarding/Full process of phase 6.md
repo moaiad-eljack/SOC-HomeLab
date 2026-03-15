@@ -219,3 +219,33 @@ could not be contacted due to DNS misconfiguration](screenshots/domain-join-fail
   [Network path not found error when testing the subscription connection 
 confirming the authentication failure between the domain joined server 
 and the workgroup Windows 10 machine](screenshots/network-path-error.png)
+
+
+## Why This Led Me to Splunk
+
+After hitting the authentication wall between the workgroup and domain 
+environments I stepped back and thought about what I was actually trying 
+to accomplish. The goal was never specifically to get Windows Event 
+Forwarding working. The goal was centralized log collection so I could 
+analyze the attack from one place without logging into individual machines.
+
+Windows Event Forwarding is a native Windows solution that works well 
+in fully configured Active Directory environments but as this phase 
+proved it is fragile and difficult to troubleshoot when the 
+infrastructure is not perfectly set up. In a real SOC environment 
+organizations do not rely on Windows Event Forwarding alone anyway. 
+They use a SIEM.
+
+A SIEM which stands for Security Information and Event Management is 
+a platform that collects logs from multiple sources, indexes them and 
+lets analysts search, visualize and alert on everything from one 
+central dashboard. The industry standard SIEM used in most SOC 
+environments today is Splunk.
+
+Instead of continuing to fight with Windows Event Forwarding I decided 
+to switch to Splunk on Windows Server 2022 and use the Splunk Universal 
+Forwarder on Windows 10 to send logs directly into Splunk. 
+
+Phase 7 covers the full Splunk setup, log ingestion and using Splunk 
+to search for the exact attack artifacts we found manually in Phase 5, 
+this time through a proper SIEM dashboard.

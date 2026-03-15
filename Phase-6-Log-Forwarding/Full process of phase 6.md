@@ -1,4 +1,4 @@
-# Phase 6 — Centralized Log Forwarding with Windows Server 2022
+# Phase 6  Centralized Log Forwarding with Windows Server 2022
 
 ## What I'm Trying to Do
 In a real enterprise SOC environment no analyst sits at individual 
@@ -101,7 +101,7 @@ winrm set winrm/config/client @{TrustedHosts="DESKTOP-2KU324L"}
 This tells the server to trust connections coming from the Windows 10 
 machine by hostname.
 
-## Step 3 — Creating the Log Forwarding Subscription
+## Step 3  Creating the Log Forwarding Subscription
 
 On Windows Server 2022 opened Event Viewer and navigated to 
 Subscriptions. Created a new subscription with the following settings:
@@ -115,7 +115,7 @@ Source computer:   DESKTOP-2KU324L
 This subscription tells the server to reach out to Windows 10 and 
 collect its Security event logs on an ongoing basis.
 
-## The Problem — Network Path Not Found
+## The Problem  Network Path Not Found
 
 When testing the subscription connection the following error appeared:
 ```
@@ -138,7 +138,7 @@ had no idea what Kerberos was since it was not part of the domain. This
 caused the authentication to fail completely which is what produced the 
 network path not found error.
 
-## Attempted Fix — Joining Windows 10 to the Domain
+## Attempted Fix  Joining Windows 10 to the Domain
 
 The logical solution was to join Windows 10 to the Cybermoaiadtraining.com 
 domain so both machines would be in the same authentication environment. 

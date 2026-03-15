@@ -70,7 +70,7 @@ nmap -sV -p- 192.168.1.18 -Pn
 ### What Each Flag Does
 - sV enables service version detection to identify exact software 
   versions running on each port
-- p- tells Nmap to scan all 65535 ports instead of just the default 
+- p- tells Nmap to scan all ports (around 6000 ports) instead of just the default 
   1000 most common ones
 - This scan took around 2 minutes to complete compared to the first 
   scan which finished in under 20 seconds

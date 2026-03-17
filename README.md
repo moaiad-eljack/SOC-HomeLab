@@ -78,12 +78,13 @@ a single SOC detection dashboard built in Splunk Enterprise.
 
 | Technique ID | Technique Name | How It Was Used |
 |---|---|---|
-| T1566 | Phishing | Free_VPN.exe delivered simulating a social engineering lure |
-| T1059 | Command and Scripting Interpreter | Shell command used to access cmd.exe on victim machine |
-| T1571 | Non Standard Port | Meterpreter C2 communication over port 4444 |
-| T1082 | System Information Discovery | sysinfo gathered OS version and architecture |
-| T1033 | System Owner Discovery | whoami confirmed the compromised user account |
-| T1070 | Indicator Removal | Windows Defender disabled before payload execution |
+| T1566 | Phishing | Free_VPN.exe was hosted on a Kali web server and downloaded by the victim machine simulating a user clicking a phishing link |
+| T1059 | Command and Scripting Interpreter | Meterpreter used the shell command to spawn cmd.exe on the victim machine which was confirmed in both Windows Event Viewer and Splunk showing cmd.exe created by Free_VPN.exe |
+| T1071 | Application Layer Protocol | Meterpreter communicated over TCP using encrypted payloads captured in Wireshark showing sustained data transfer between Kali and Windows 10 |
+| T1571 | Non Standard Port | The reverse shell used port 4444 for C2 communication which was visible in Wireshark packet capture and confirmed by netstat showing ESTABLISHED connections from Free_VPN.exe |
+| T1082 | System Information Discovery | The sysinfo command was run through the meterpreter session revealing the OS version, architecture, computer name and domain of the victim machine |
+| T1033 | System Owner Discovery | The whoami command was executed through the meterpreter shell and detected in both Windows Event Viewer and Splunk under EventCode 4688 confirming the compromised user account as wsp vro |
+| T1070 | Indicator Removal | Windows Defender real time protection, cloud delivered protection and automatic sample submission were all disabled on the victim machine before payload execution to prevent detection |
 
 ## 📚 Lessons Learned
 Windows 10 does not enable process creation auditing by default which 

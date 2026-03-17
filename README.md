@@ -44,6 +44,7 @@ Viewer for host based forensics.
 - [Phase 4 - Wireshark Traffic Analysis](./Phase-4-Wireshark-Analysis/notes.md)
 - [Phase 5 - Windows Event Log Analysis](./Phase-5-Log-Analysis/notes.md)
 - [Phase 6 - Log Forwarding](./Phase-6-Log-Forwarding/notes.md)
+- [Phase 7 - Splunk SIEM Integration](./Phase-7-Splunk-SIEM/notes.md)
 
 ## 🔍 Key Findings
 Nmap reconnaissance revealed open ports 135, 139 and 445 on the victim 
@@ -103,6 +104,14 @@ workgroup and domain environment will fail at the authentication layer
 regardless of network connectivity. This is a lesson that applies 
 directly to real enterprise environments where infrastructure gaps 
 can silently break security tooling.
+
+Splunk ingestion requires proper configuration of inputs.conf on the 
+Universal Forwarder. Without this file the forwarder has no instructions 
+on what to collect and Splunk receives nothing regardless of network 
+connectivity. Using WinEventLog inputs instead of raw evtx file 
+monitoring is the correct enterprise approach as it enables proper 
+field extraction making SIEM based detection significantly more 
+powerful and accurate.
 
 ## ⚠️ Disclaimer
 All activities were conducted in a fully isolated VirtualBox internal 

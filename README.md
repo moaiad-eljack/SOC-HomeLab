@@ -23,6 +23,8 @@ it happened including the troubleshooting steps and failures.
 - Wireshark for live network traffic capture and analysis
 - Windows Event Viewer for host based log forensics
 - Windows Event Forwarding for centralized log collection attempt
+- Splunk Enterprise for SIEM log ingestion and attack detection
+- Splunk Universal Forwarder for log forwarding from Windows 10
 
 ## 👾 Attack Summary
 A reverse shell payload named Free_VPN.exe was created using msfvenom 
@@ -65,6 +67,12 @@ explorer.exe confirming the user double clicked it and the username
 wsp vro. Post exploitation commands run through the meterpreter shell 
 were also captured in the logs proving the complete attack chain from 
 initial execution to active attacker control.
+
+Splunk successfully ingested Windows Security Event Logs from the 
+Windows 10 victim machine via the Universal Forwarder and detected 
+the complete attack chain including Free_VPN.exe execution, cmd.exe 
+shell spawning and whoami post exploitation command all visible in 
+a single SOC detection dashboard built in Splunk Enterprise.
 
 ## 🧭 MITRE ATTCK Mapping
 

@@ -60,7 +60,7 @@ WannaCry in 2017 which used the EternalBlue exploit against this
 exact port. Nmap also flagged that SMB signing was enabled but not 
 required which in a real environment opens the door to relay attacks.
 
-## Scan 2  Full Port Scan
+## Scan 2 Full Port Scan
 
 ### Command Used
 ```bash

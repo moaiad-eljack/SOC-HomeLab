@@ -38,13 +38,13 @@ perspective using Wireshark for network forensics and Windows Event
 Viewer for host based forensics.
 
 ## 📁 Phases
-- [Phase 1 - Network Setup](./Phase-1-Network-Setup/notes.md)
-- [Phase 2 - Reconnaissance](./Phase-2-Reconnaissance/notes.md)
-- [Phase 3 - Payload Creation and Delivery](./Phase-3-Payload-Delivery/notes.md)
-- [Phase 4 - Wireshark Traffic Analysis](./Phase-4-Wireshark-Analysis/notes.md)
-- [Phase 5 - Windows Event Log Analysis](./Phase-5-Log-Analysis/notes.md)
-- [Phase 6 - Log Forwarding](./Phase-6-Log-Forwarding/notes.md)
-- [Phase 7 - Splunk SIEM Integration](./Phase-7-Splunk-SIEM/notes.md)
+- [Phase 1 - Network Setup](./Phase-1-Network-Setup/Full%20process%20of%20phase%201.md)
+- [Phase 2 - Reconnaissance](./Phase-2-Reconnaissance/Full%20process%20of%20phase%202.md)
+- [Phase 3 - Payload Creation and Delivery](./Phase-3-Payload-Delivery/Full%20process%20of%20phase%203.md)
+- [Phase 4 - Wireshark Traffic Analysis](./Phase-4-Wireshark-Analysis/Full%20process%20of%20phase%204.md)
+- [Phase 5 - Windows Event Log Analysis](./Phase-5-Log-Analysis/Full%20process%20of%20phase%205.md)
+- [Phase 6 - Log Forwarding](./Phase-6-Log-Forwarding/Full%20process%20of%20phase%206.md)
+- [Phase 7 - Splunk SIEM Integration](./Phase-7-Splunk-SIEM/Full%20process%20of%20phase%207.md)
 
 ## 🔍 Key Findings
 Nmap reconnaissance revealed open ports 135, 139 and 445 on the victim 

@@ -33,9 +33,17 @@ phishing attack. The filename was chosen deliberately as a social
 engineering lure since free VPN software is something many people 
 download without thinking twice. The payload established a meterpreter 
 session back to Kali Linux giving full remote access to the victim 
-machine. The entire attack was then analyzed from the defender 
-perspective using Wireshark for network forensics and Windows Event 
-Viewer for host based forensics.
+machine.
+
+The attack was then analyzed from the defender perspective across three 
+layers. Wireshark captured the network evidence showing malware 
+beaconing behavior and encrypted meterpreter traffic on port 4444. 
+Windows Event Viewer provided the host evidence through Event ID 4688 
+logs capturing the exact execution of Free_VPN.exe, the parent process 
+and the compromised user account. Finally Splunk Enterprise was deployed 
+as the SIEM to ingest Security logs from the victim machine via a 
+Universal Forwarder and detect the complete attack chain automatically 
+through a custom SOC detection dashboard.
 
 ## 📁 Phases
 - [Phase 1 - Network Setup](./Phase-1-Network-Setup/Full%20process%20of%20phase%201.md)

@@ -59,10 +59,9 @@ Nmap reconnaissance revealed open ports 135, 139 and 445 on the victim
 machine with SMB running and message signing not required which in a 
 real environment would be flagged as a relay attack risk.
 
-The reverse shell payload was initially caught and killed by Windows 
-Defender the moment it executed which is realistic behavior showing 
-how antivirus detects known malware signatures. Windows Defender was 
-disabled to complete the simulation.
+The reverse shell payload was immediately detected and blocked by Windows Defender, 
+demonstrating real-world signature-based detection. To complete the full attack and 
+detection workflow in this isolated lab environment, protections were then temporarily disabled.
 
 Wireshark captured malware beaconing behavior on port 4444 showing 
 Free_VPN.exe repeatedly attempting to connect back to Kali even before 
